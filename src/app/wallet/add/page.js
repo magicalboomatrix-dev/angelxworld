@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter, useSearchParams } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
@@ -12,8 +12,6 @@ const isValidTRC20Address = (address) => {
   const trc20Regex = /^T[A-Za-z0-9]{33}$/;
   return trc20Regex.test(address);
 };
-
-import { Suspense } from "react";
 
 function AddWalletPageInner() {
   const [address, setAddress] = useState("");
@@ -45,7 +43,6 @@ function AddWalletPageInner() {
       return;
     }
 
-    // Validate TRC20 address format
     if (!isValidTRC20Address(address)) {
       setMessageType("error");
       setMessage("Please enter a valid TRC20 wallet address.");
@@ -72,107 +69,6 @@ function AddWalletPageInner() {
       });
 
       if (response.status === 401 || response.status === 404) {
-        // Token invalid or user not found - redirect to login
-        localStorage.removeItem("token");
-        router.push("/login");
-        return;
-      }
-
-      const data = await response.json();
-
-      if (response.ok) {
-        setMessageType("success");
-        setMessage("Crypto wallet added successfully! Redirecting...");
-        setAddress("");
-
-        setTimeout(() => {
-          router.push("/wallet");
-        }, 1500);
-      } else {
-        setMessageType("error");
-        setMessage(data.error || "Failed to add crypto wallet.");
-        setAddress("");
-      }
-    } catch (error) {
-      console.error(error);
-      setMessageType("error");
-      setMessage("Something went wrong.");
-      setAddress("");
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  if (!mounted) return null;
-
-  return (
-    <div className={styles.phoneContainer}>
-      <header className={styles.header}>
-        <div className={styles.backIcon}>
-          <Link href="/wallet">
-            <Image
-              src="/images/back-btn.png"
-              width={18}
-              height={18}
-              alt="Back"
-            />
-          </Link>
-        </div>
-        <h1 className={styles.headerTitle}>Bind wallet address</h1>
-      </header>
-      {/* ...existing code... */}
-    </div>
-  );
-}
-
-export default function AddWalletPage() {
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <AddWalletPageInner />
-    </Suspense>
-  );
-}
-
-  const currencyIcons = {
-    PAYX: "/images/payx.jpg",
-    USDT: "/images/tb-ic1.png",
-  };
-
-  const handleSubmit = async () => {
-    if (!address) {
-      setMessageType("error");
-      setMessage("Please enter wallet address.");
-      return;
-    }
-
-    // Validate TRC20 address format
-    if (!isValidTRC20Address(address)) {
-      setMessageType("error");
-      setMessage("Please enter a valid TRC20 wallet address.");
-      return;
-    }
-
-    const token = localStorage.getItem("token");
-    if (!token) {
-      router.push("/login");
-      return;
-    }
-
-    setLoading(true);
-    setMessage("");
-
-    try {
-      const response = await fetch("/api/crypto-wallets", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({ address, network: "TRC20", currency }),
-      });
-
-      if (response.status === 401 || response.status === 404) {
-        // Token invalid or user not found - redirect to login
         localStorage.removeItem("token");
         router.push("/login");
         return;
@@ -235,7 +131,10 @@ export default function AddWalletPage() {
             </div>
           </div>
 
-          <div className={styles.formRow} style={{ alignItems: "flex-start" }}>
+          <div
+            className={styles.formRow}
+            style={{ alignItems: "flex-start" }}
+          >
             <span className={styles.label}>
               Wallet
               <br />
@@ -252,7 +151,10 @@ export default function AddWalletPage() {
           </div>
         </div>
 
-        <div className={styles.actionContainer} style={{ paddingBottom: 0 }}>
+        <div
+          className={styles.actionContainer}
+          style={{ paddingBottom: 0 }}
+        >
           <button
             className={
               address
@@ -268,17 +170,27 @@ export default function AddWalletPage() {
 
         <div className={styles.warningBox}>
           <p className={styles.warningText}>
-            Please check the information carefully before submission. If
-            transfer issues occur due to incorrect information provided by user,
-            it is the user's own responsibility.
+            Please check the information carefully before submission.
+            If transfer issues occur due to incorrect information provided
+            by user, it is the user's own responsibility.
           </p>
           {message && (
-            <p className={`${styles.message} ${styles[messageType]}`}>
+            <p
+              className={`${styles.message} ${styles[messageType]}`}
+            >
               {message}
             </p>
           )}
         </div>
       </div>
     </div>
+  );
+}
+
+export default function AddWalletPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <AddWalletPageInner />
+    </Suspense>
   );
 }
