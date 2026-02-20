@@ -13,7 +13,9 @@ const isValidTRC20Address = (address) => {
   return trc20Regex.test(address);
 };
 
-export default function AddWalletPage() {
+import { Suspense } from "react";
+
+function AddWalletPageInner() {
   const [address, setAddress] = useState("");
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
@@ -24,12 +26,112 @@ export default function AddWalletPage() {
   const [currency, setCurrency] = useState("PAYX");
   const [mounted, setMounted] = useState(false);
 
- useEffect(() => {
-  setMounted(true);
-  if (currencyFromUrl) {
-    setCurrency(currencyFromUrl);
-  }
-}, [currencyFromUrl]);
+  useEffect(() => {
+    setMounted(true);
+    if (currencyFromUrl) {
+      setCurrency(currencyFromUrl);
+    }
+  }, [currencyFromUrl]);
+
+  const currencyIcons = {
+    PAYX: "/images/payx.jpg",
+    USDT: "/images/tb-ic1.png",
+  };
+
+  const handleSubmit = async () => {
+    if (!address) {
+      setMessageType("error");
+      setMessage("Please enter wallet address.");
+      return;
+    }
+
+    // Validate TRC20 address format
+    if (!isValidTRC20Address(address)) {
+      setMessageType("error");
+      setMessage("Please enter a valid TRC20 wallet address.");
+      return;
+    }
+
+    const token = localStorage.getItem("token");
+    if (!token) {
+      router.push("/login");
+      return;
+    }
+
+    setLoading(true);
+    setMessage("");
+
+    try {
+      const response = await fetch("/api/crypto-wallets", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({ address, network: "TRC20", currency }),
+      });
+
+      if (response.status === 401 || response.status === 404) {
+        // Token invalid or user not found - redirect to login
+        localStorage.removeItem("token");
+        router.push("/login");
+        return;
+      }
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setMessageType("success");
+        setMessage("Crypto wallet added successfully! Redirecting...");
+        setAddress("");
+
+        setTimeout(() => {
+          router.push("/wallet");
+        }, 1500);
+      } else {
+        setMessageType("error");
+        setMessage(data.error || "Failed to add crypto wallet.");
+        setAddress("");
+      }
+    } catch (error) {
+      console.error(error);
+      setMessageType("error");
+      setMessage("Something went wrong.");
+      setAddress("");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  if (!mounted) return null;
+
+  return (
+    <div className={styles.phoneContainer}>
+      <header className={styles.header}>
+        <div className={styles.backIcon}>
+          <Link href="/wallet">
+            <Image
+              src="/images/back-btn.png"
+              width={18}
+              height={18}
+              alt="Back"
+            />
+          </Link>
+        </div>
+        <h1 className={styles.headerTitle}>Bind wallet address</h1>
+      </header>
+      {/* ...existing code... */}
+    </div>
+  );
+}
+
+export default function AddWalletPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <AddWalletPageInner />
+    </Suspense>
+  );
+}
 
   const currencyIcons = {
     PAYX: "/images/payx.jpg",
