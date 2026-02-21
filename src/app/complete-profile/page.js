@@ -70,7 +70,7 @@ export default function CompleteProfile() {
               <h4
                 style={{
                   fontWeight: 'normal',
-                  fontSize: '18px',
+                  fontSize: '15px',
                   paddingTop: '13px',
                   color: '#ababab',
                 }}
