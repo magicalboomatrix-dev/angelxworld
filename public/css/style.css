@@ -3028,6 +3028,11 @@ button.closeAppLink {
     border: 0;
     background: transparent;
 }
+.page-wrapper-login h1.title {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 10px 0;
+}
 
 
 
