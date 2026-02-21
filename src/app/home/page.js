@@ -101,7 +101,7 @@ export default function HomePage() {
                 /></Link>
             </div>
           </header>
-          <div className="page-overflow">        
+          <div className="page-overflows">        
           <div className="page-wrapper page-wrapper-ex">
             <section className="section-1">
               <div className="userpro">
