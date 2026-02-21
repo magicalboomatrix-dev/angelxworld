@@ -1,4 +1,5 @@
 import HomePage from "./homeClient.js";
+import { Metadata } from 'next';
 
 export const metadata = {
   title: "Angelx Official – Best Platform to Buy & Sell USDT | Angelxsss",
