@@ -1,12 +1,13 @@
-import HomePage from "./homeClient.js";
 import { Metadata } from 'next';
+import HomePage from "./homeClient.js";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Angelx Official – Best Platform to Buy & Sell USDT | Angelx",
 
-  description:
-    "Convert USDT to INR at premium rates with AngelX. Fast processing, instant payouts, strong security, reliable support, and easy crypto selling—your seamless exchange solution.",
-
+  /*description:
+    "Convert USDT to INR at premium rates with AngelX. Fast processing, instant payouts, strong security, reliable support, and easy crypto selling—your seamless exchange solution.",*/
+description: 'Page Description',
+  
   keywords: [
     "angelx usdt price",
     "angelx crypto",
