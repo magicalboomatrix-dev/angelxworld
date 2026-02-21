@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import { Metadata } from 'next';
 import HomePage from "./homeClient.js";
 
 export const Metadata = {
