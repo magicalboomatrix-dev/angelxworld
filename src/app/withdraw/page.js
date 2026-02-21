@@ -179,7 +179,15 @@ export default function WithdrawUSDT() {
         {/* Select Address Header */}
         <div className="content-row select-address-header">
           <h4 className="label-bold">Select address</h4>
-          <Link href={`/wallet/add?currency=${activeTab}`}>
+          {/*<Link href={`/wallet/add?currency=${activeTab}`}>
+            <img
+              src="/images/add-wallet-icon.jpg"
+              alt="add"
+              className="add-icon"
+            />
+          </Link>*/}
+
+          <Link href={`/wallet`}>
             <img
               src="/images/add-wallet-icon.jpg"
               alt="add"
