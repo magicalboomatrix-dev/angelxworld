@@ -1,4 +1,5 @@
-export const metadata = {
+export async function generateMetadata() {
+  return {
   title: "Angelx Official – Best Platform to Buy & Sell USDT | Angelx",
 
   description:
@@ -55,7 +56,8 @@ export const metadata = {
     site: "@AngelX",
     images: ["https://www.angelx.ind.in/images/og-image.png"],
   },
-};
+ };
+}
 
 export default function RootLayout({ children }) {
  
