@@ -64,18 +64,18 @@ export default function CompleteProfile() {
 
             <section className="section-1">
               <h3 className="title">
-                <b>Welcome to AngelX</b>
+                <b>Complete Your Profile to Stay Connected</b>
               </h3>
 
               <h4
                 style={{
                   fontWeight: 'normal',
                   fontSize: '18px',
-                  paddingBottom: '10px',
-                  color: '#696969',
+                  paddingTop: '13px',
+                  color: '#ababab',
                 }}
               >
-                Exchange more, earn more, make your life better.
+                Enter your name and email to continue
               </h4>
 
               <div className="form-bx">
