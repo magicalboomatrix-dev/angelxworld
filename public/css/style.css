@@ -3024,7 +3024,10 @@ button.closeAppLink {
     align-items: center;
 }
 
-
+.header .right.d-flex.space button {
+    border: 0;
+    background: transparent;
+}
 
 
 
