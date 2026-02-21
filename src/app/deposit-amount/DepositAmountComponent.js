@@ -230,7 +230,7 @@ export default function DepositAmount() {
             </div>
             <div className="right d-flex">
               <img src="/images/gray-warn.png" />
-              <img src="/images/undo.png" />
+              <Link href="/history"><img src="/images/undo.png" /></Link>
             </div>
           </header>
 
