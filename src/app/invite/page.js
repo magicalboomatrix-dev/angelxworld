@@ -74,7 +74,7 @@ export default function DemoPage() {
       </table>
     </div>
 
-    <div className="login-bx" style={{"margin":"0 0 0 0"}}><button className="login-btn open-btn" onClick={() => setIsOpen(true)}>Invite Friends</button></div>
+    <div className="login-bx" style={{"margin":"0 0 0 0",padding: 0}}><button className="login-btn open-btn" onClick={() => setIsOpen(true)} style={{width:"100%"}}>Invite Friends</button></div>
 
         
   </div>
