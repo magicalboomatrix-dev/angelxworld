@@ -461,7 +461,7 @@ export default function Exchange() {
           background: #fff;
           border-top-left-radius: 20px;
           border-top-right-radius: 20px;
-          padding: 20px 20px 30px 20px;
+          padding: 20px;
           min-height: 250px;
           transform: translateY(100%);
           transition: transform 0.3s ease;
