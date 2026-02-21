@@ -2,7 +2,7 @@ import "./globals.css";
 import Script from "next/script";
 import LayoutClient from "./LayoutClient";
 
-export const metadata = {
+/*export const metadata = {
 
   title: "Welcome to AngelX — India's Trusted USDT Exchange Platform",
   description:
@@ -54,7 +54,7 @@ export const metadata = {
       "Convert USDT to INR at premium rates with AngelX. Fast processing, instant payouts, strong security, reliable support, and easy crypto selling—your seamless exchange solution.",
     site: "@AngelX",
   },
-};
+};*/
 
 
 export default function Layout({ children }) {
