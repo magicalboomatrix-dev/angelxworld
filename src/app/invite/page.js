@@ -275,7 +275,7 @@ button.know-btn {
     text-align: left;
     font-weight: 300;
     color: #000;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .popup.QR-popup .invite-field {
