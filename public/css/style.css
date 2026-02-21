@@ -3021,6 +3021,11 @@ button.closeAppLink {
 }
 */
 
+.header .right.d-flex.space {
+    gap: 10px;
+    align-items: center;
+}
+
 
 
 
