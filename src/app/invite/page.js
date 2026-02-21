@@ -95,7 +95,7 @@ export default function DemoPage() {
               <div className="left">Invite code</div>
               <div className="right">
                 <span className="code-num">dV6OjDX9kpQ8</span> 
-                <div className="icon-img"><img src="/images/copy-ic.png" alt="QR-code"  /></div>
+                <div className="icon-img"><img src="/images/copyicon.png" alt="QR-code"  /></div>
               </div>
             </div>
 
@@ -103,7 +103,7 @@ export default function DemoPage() {
               <div className="left">Invite link</div>
               <div className="right">
                 <span className="code-num">https://pub.ang....DX9kpQ8</span> 
-                <div className="icon-img"><img src="/images/copy-ic.png" alt="QR-code"  /></div>
+                <div className="icon-img"><img src="/images/copyicon.png" alt="QR-code"  /></div>
               </div>
             </div>
 
