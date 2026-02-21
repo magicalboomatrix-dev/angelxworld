@@ -169,7 +169,7 @@ export default function BankPage() {
             </div>
           </header>
 
-          <div className="page-wrapper page-wrapper-ex">
+          <div className="page-wrapper page-wrapper-ex" style={{background: "#ffffff"}}>
             <section className="section-1 text-center">
               <div className="add-bank">
                 <Link href="/bind-bank-card" className="button-style">
