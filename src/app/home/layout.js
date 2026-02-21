@@ -1,4 +1,4 @@
-export async function generateMetadata = {
+export const metadata = {
   title: "Angelx Official – Best Platform to Buy & Sell USDT | Angelx",
 
   description:
