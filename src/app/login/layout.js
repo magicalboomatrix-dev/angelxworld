@@ -26,5 +26,15 @@ export const metadata = {
 };
 
 export default function LoginLayout({ children }) {
-  return children;
+  return (
+    <>
+      <head>
+        <meta
+          name="description"
+          content="Log in to AngelX for instant USDT to INR conversions at top rates. Fast processing, secure payouts, reliable support—quickly access your account and sell crypto easily."
+        />
+      </head>
+      {children}
+    </>
+  );
 }
