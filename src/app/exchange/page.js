@@ -90,7 +90,7 @@ export default function Exchange() {
     
     <div>
       <main>
-        <div className="page-wrappers">
+        <div className="page-wrappers" style={{height: 'auto'}}>
           <header className="header">
             <div className="left">
               <div className="header-left">
