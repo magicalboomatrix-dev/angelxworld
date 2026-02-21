@@ -86,7 +86,7 @@ export default function DemoPage() {
       />
 
       <div className={`popup QR-popup ${isOpen ? "show" : ""}`}>
-        <div className="handle" />
+  
         <div className="img"><img src="/images/QR-img.jpg" alt="QR-code"  /></div>
         <p>Please use mobile browser scan QR code to registration</p>
         
@@ -165,8 +165,6 @@ export default function DemoPage() {
           z-index: 1000;
           box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.1);
           visibility: hidden;
-          background-image: url(../images/ex-bg1.png);
-          background-position: top -30px left;
         }
 
         .popup.show {
@@ -266,6 +264,43 @@ button.know-btn {
 
 .page-wrapper.page-wrapper-ex section.section-2 .bx button.open-btn h3 {
     font-weight: normal;
+}
+
+.popup.QR-popup {
+    padding-top: 40px;
+    text-align: center;
+}
+
+.popup.QR-popup p {
+    text-align: left;
+    font-weight: 300;
+    color: #000;
+    font-size: 14px;
+}
+
+.popup.QR-popup .invite-field {
+    margin: 25px 0 10px;
+}
+
+.popup.QR-popup .invite-field .field-bx {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 12px 0;
+    background: #eeeef1;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popup.QR-popup .invite-field .field-bx .right {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.popup.QR-popup .invite-field .field-bx .right .icon-img {
+    display: flex;
 }
       `}</style>  
     </div>
