@@ -228,7 +228,7 @@ export default function DepositAmount() {
               </div>
               <h3>Deposit USDT</h3>
             </div>
-            <div className="right d-flex">
+            <div className="right d-flex space">
               <img src="/images/gray-warn.png" />
               <Link href="/history"><img src="/images/undo.png" /></Link>
             </div>
