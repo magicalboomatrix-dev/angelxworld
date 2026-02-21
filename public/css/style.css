@@ -1391,7 +1391,6 @@ h1, h2, h3, h4, p {
     height: 100vh;
     box-sizing: border-box;
 	overflow: hidden;
-	height: auto;
 }
 
 .page-wrapper.page-wrapper-ex {
