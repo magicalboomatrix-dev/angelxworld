@@ -3,8 +3,6 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import Head from "next/head";
-
 import { useRouter } from "next/navigation";
 
 export default function HomePage() {
@@ -75,14 +73,7 @@ export default function HomePage() {
     );
   }
 
-  return (
-  <><Head>
-        <meta
-          name="description"
-          content="Convert USDT to INR at premium rates with AngelX..."
-        />
-      </Head>
-            
+  return (    
     <div> 
       <main>
         <div className="page-wrappers page-wrapper-ex home-wrappers" style={{height: 'auto',paddingBottom: '50px'}}>
@@ -256,7 +247,6 @@ export default function HomePage() {
        </div>                  
       </main>
     </div>
-</>
   );
 }
 
