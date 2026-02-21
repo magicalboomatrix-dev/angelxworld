@@ -130,7 +130,7 @@ export default function SettingPage() {
   fontSize: '15px',
   letterSpacing: '.2px'
 }}>
-              <img src="/images/telegram-ic.png" alt="telegram"  style={{marginRight: '12px'}} /> Telegram
+              <img src="/images/telegram-ic.png" alt="telegram"  width="32" height="32" style={{marginRight: '12px'}} /> Telegram
             </Link>
             
             <Link href="https://wa.me/+917056254884" style={{
@@ -139,7 +139,7 @@ export default function SettingPage() {
   fontSize: '15px',
   letterSpacing: '.2px'
 }}>
-              <img src="/images/whatsapp-ic.png" alt="whatsapp"  style={{marginRight: '12px'}} /> WhatsApp
+              <img src="/images/whatsapp-ic.png" alt="whatsapp" width="32" height="32"  style={{marginRight: '12px'}} /> WhatsApp
             </Link>
         </div>
 
