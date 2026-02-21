@@ -1876,7 +1876,7 @@ section.section-4 .dflex-out .rw {
 }
 
 .page-wrapperss.page-wrapper-loginacc section.section-1 {
-    padding: 40px 30px;
+    padding: 20px 30px 40px 30px;
 }
 
 .page-wrapperss.page-wrapper-loginacc section.section-1 h3.title {
@@ -1965,7 +1965,7 @@ section.section-4 .dflex-out .rw {
 
 .page-wrapperss.form-wrapper .form-bx .form-rw {
     border: 1px solid #ccc;
-    border-radius: 10px;
+    border-radius: 0px;
 }
 
 .page-wrapperss.form-wrapper .form-bx input[type="text"],
@@ -1991,7 +1991,6 @@ section.section-4 .dflex-out .rw {
 
 .page-wrapperss.form-wrapper .form-bx .form-rw {
     position: relative;
-    margin: 25px 0 0;
 }
 
 .page-wrapperss.form-wrapper .login-btn {
