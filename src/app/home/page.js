@@ -1,4 +1,4 @@
-import ExchangeUI from "./HomePage";
+import HomePage from "./homeClient.js";
 
 export const metadata = {
   title: "Exchange USDT to INR – AngelX",
