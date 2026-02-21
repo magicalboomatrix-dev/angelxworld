@@ -229,7 +229,7 @@ export default function DepositAmount() {
               <h3>Deposit USDT</h3>
             </div>
             <div className="right d-flex space">
-              <img src="/images/gray-warn.png" />
+              <button onClick={() => setShowModal(true)}><img src="/images/gray-warn.png" /></button>
               <Link href="/history"><img src="/images/undo.png" /></Link>
             </div>
           </header>
