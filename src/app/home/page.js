@@ -1,7 +1,7 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import HomePage from "./homeClient.js";
 
-export const metadata: Metadata = {
+export const Metadata = {
   title: "Angelx Official – Best Platform to Buy & Sell USDT | Angelx",
 
   /*description:
