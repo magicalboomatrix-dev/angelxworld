@@ -1,4 +1,4 @@
-export const metadatas = {
+export const metadata = {
   title: "Angelx Official – Best Platform to Buy & Sell USDT | Angelx",
 
   description:
