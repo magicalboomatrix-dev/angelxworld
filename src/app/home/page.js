@@ -2,7 +2,7 @@ import HomePage from "./homeClient.js";
 import { Metadata } from 'next';
 
 export const metadata = {
-  title: "Angelx Official – Best Platform to Buy & Sell USDT | Angelxsss",
+  title: "Angelx Official – Best Platform to Buy & Sell USDT | Angelx",
 
   description:
     "Convert USDT to INR at premium rates with AngelX. Fast processing, instant payouts, strong security, reliable support, and easy crypto selling—your seamless exchange solution.",
