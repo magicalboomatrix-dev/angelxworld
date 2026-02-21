@@ -154,7 +154,7 @@ export default function USDTDeposit() {
                     <p className="title">Amount</p>
                     <div
                       className="select-amt"
-                      style={{ position: "relative" }}
+                      style={{ position: "relative", padding: '5px 15px 5px 5px'}}
                     >
                       <input
                         type="number"
