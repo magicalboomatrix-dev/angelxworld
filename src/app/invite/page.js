@@ -11,7 +11,7 @@ export default function DemoPage() {
   return (
     <div>
       <main>
-        <div className="page-wrappers empty-page" style={{height: 'auto',paddingBottom: '80px'}}>
+        <div className="page-wrappers empty-page" style={{height: 'auto',paddingBottom: '100px'}}>
 
   <div className="page-wrapperss page-wrapper-ex page-wrapper-login page-wrapper-loginacc form-wrapper" 
   style={{'height': '100%','overflow': 'auto','scrollbarWidth':'thin', 'scrollbarColor':'transparent transparent'}}>
