@@ -697,7 +697,7 @@ section.section-4 .dflex-out .rw {
 
 .page-wrapperss.form-wrapper .form-bx .form-rw {
     border: 1px solid #ccc;
-    border-radius: 10px;
+    border-radius: 0px;
 }
 
 .page-wrapperss.form-wrapper .form-bx  input[type="text"],
@@ -724,7 +724,7 @@ section.section-4 .dflex-out .rw {
 
 .page-wrapperss.form-wrapper .form-bx .form-rw {
     position: relative;
-    margin: 25px 0 0;
+    margin: 15px 0 10px;
 }
 
 .page-wrapperss.form-wrapper .login-btn {
