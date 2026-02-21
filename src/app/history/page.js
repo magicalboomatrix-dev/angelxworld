@@ -48,7 +48,7 @@ export default function DemoPage() {
       <main className="content-wrapper">
         <div className="brdc">
           <div className="back-btn-container">
-            <Link href="/home" className="back-link">
+            <Link href="/home" className="back-link" style={{position: 'relative',zIndex: '999'}}>
           <img src="/images/back-btn.png" alt="back" />
         </Link>
           </div>
