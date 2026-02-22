@@ -1,4 +1,3 @@
-import { Metadata } from 'next';
 import HomePage from "./homeClient.js";
 
 export const metadata = {
