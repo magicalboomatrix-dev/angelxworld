@@ -1,7 +1,8 @@
+import { Metadata } from 'next';
 import HomePage from "./homeClient.js";
 
 export const metadata = {
-  metadataBase: new URL("https://www.angelx.ind.in"),
+  /*metadataBase: new URL("https://www.angelx.ind.in"),*/
 
   title: "AngelX Official – Best Platform to Buy & Sell USDT | AngelX",
 
