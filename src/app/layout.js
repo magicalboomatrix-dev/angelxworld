@@ -60,7 +60,7 @@ import LayoutClient from "./LayoutClient";
 export default function Layout({ children }) {
   return (
     <html lang="en">
-      <head>
+  {/*<head>
       <link rel="icon" type="image/x-icon" href="/images/fav.png" />
       <link rel="manifest" href="/manifest.json" />
       <link rel="apple-touch-icon" href="/icon-192x192.png" />
@@ -84,7 +84,6 @@ export default function Layout({ children }) {
         <meta name="description" content="" />
         <meta meta name="viewport" content="width=device-width, user-scalable=no" />
 
-         {/* Google tag */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-17927547758"
           strategy="afterInteractive"
@@ -98,7 +97,6 @@ export default function Layout({ children }) {
           `}
         </Script>
 
-        {/* Google Analytics (GA4) */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-ZZFB2YV2JH"
           strategy="afterInteractive"
@@ -112,7 +110,7 @@ export default function Layout({ children }) {
           `}
         </Script>  
             
-      </head>
+      </head>*/}
       <body>
         <LayoutClient>{children}</LayoutClient>
         <Script src="https://code.jquery.com/jquery-3.6.0.js" strategy="beforeInteractive" />
