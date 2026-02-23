@@ -60,7 +60,7 @@ import LayoutClient from "./LayoutClient";
 export default function Layout({ children }) {
   return (
     <html lang="en">
-  {/*<head>
+  <head>
       <link rel="icon" type="image/x-icon" href="/images/fav.png" />
       <link rel="manifest" href="/manifest.json" />
       <link rel="apple-touch-icon" href="/icon-192x192.png" />
@@ -81,7 +81,7 @@ export default function Layout({ children }) {
           crossOrigin="anonymous"
         />
         <link rel="stylesheet" href="/css/style.css" type="text/css" />
-        <meta name="description" content="" />
+ 
         <meta meta name="viewport" content="width=device-width, user-scalable=no" />
 
         <Script
@@ -110,7 +110,7 @@ export default function Layout({ children }) {
           `}
         </Script>  
             
-      </head>*/}
+      </head>
       <body>
         <LayoutClient>{children}</LayoutClient>
         <Script src="https://code.jquery.com/jquery-3.6.0.js" strategy="beforeInteractive" />
